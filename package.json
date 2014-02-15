@@ -1,7 +1,8 @@
 {
   "name": "hexo-livereload",
   "version": "0.0.1",
-  "description": "Livereload plugin for Hexo",
+  "description": "LiveReload plugin for Hexo",
+  "main": "index",
   "repository": {
     "type": "git",
     "url": "https://github.com/hexojs/hexo-livereload.git"
