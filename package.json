@@ -1,6 +1,6 @@
 {
   "name": "hexo-livereload",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "LiveReload plugin for Hexo",
   "main": "index",
   "repository": {

@@ -18,7 +18,7 @@ When you run `hexo server`, this plugin will be started automatically.
 
 You can configure this plugin in `_config.yml`.
 
-``` yml
+``` yaml
 livereload:
   port: 35729
 ```
