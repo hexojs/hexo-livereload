@@ -1,25 +1,6 @@
 var tinylr = require('tiny-lr'),
-  port = 35729,
-  server = tinylr(),
-  serverUrl = 'http://localhost:' + port,
-  queue = [],
-  timer;
-
-var timerFn = function(){
-  if (queue.length){
-    server.changed({
-      body: {
-        files: queue
-      }
-    });
-  }
-};
-
-hexo.locals({
-  livereload_js: function(){
-    return serverUrl + '/livereload.js';
-  }
-});
+    port = 35729,
+    server = tinylr();
 
 hexo.on('server', function(){
   server.listen(port, function(err){
@@ -28,13 +9,14 @@ hexo.on('server', function(){
     hexo.log.i('Livereload is listening on port %d', port);
   });
 
-  hexo.route.on('update', function(path, data){
-    if (!data.modified) return;
-    if (timer) clearTimeout(timer);
-
-    queue.push(path);
-    timer = setTimeout(timerFn, 100);
+  hexo.on("processAfter", function(path) {
+    server.changed({
+      body: {
+        files: [path]
+      }
+    });
   });
+
 });
 
 hexo.on('exit', function(){
