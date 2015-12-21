@@ -1,3 +1,6 @@
+var Hexo = require('hexo');
+var hexo = new Hexo(process.cwd(), {});
+
 var tinylr = require('tiny-lr'),
   port = 35729,
   server = tinylr(),
@@ -15,10 +18,8 @@ var timerFn = function(){
   }
 };
 
-hexo.locals({
-  livereload_js: function(){
+hexo.locals.set('livereload_js', function(){
     return serverUrl + '/livereload.js';
-  }
 });
 
 hexo.on('server', function(){
