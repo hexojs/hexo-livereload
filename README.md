@@ -1,5 +1,8 @@
 # LiveReload
 
+[![npm version][npm-badge]][npm-url]
+
+
 Refresh the browser when files changed.
 
 ## Install
@@ -24,3 +27,6 @@ livereload:
 ```
 
 - **port** - LiveReload port (Default: 35729)
+
+[npm-badge]: https://badge.fury.io/js/hexo-broken-link-checker.svg
+[npm-url]: https://badge.fury.io/js/hexo-broken-link-checker
