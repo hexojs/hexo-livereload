@@ -1,7 +1,6 @@
-# LiveReload
+# hexo-livereload
 
-[![npm version][npm-badge]][npm-url]
-
+[![Build Status](https://travis-ci.org/hexojs/hexo-livereload.svg?branch=master)](https://travis-ci.org/hexojs/hexo-livereload)  [![NPM version](https://badge.fury.io/js/hexo-livereload.svg)](http://badge.fury.io/js/hexo-livereload) [![Coverage Status](https://img.shields.io/coveralls/hexojs/hexo-livereload.svg)](https://coveralls.io/r/hexojs/hexo-livereload?branch=master)
 
 Refresh the browser when files changed.
 

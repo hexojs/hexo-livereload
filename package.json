@@ -3,24 +3,31 @@
   "version": "0.2.0",
   "description": "LiveReload plugin for Hexo",
   "main": "index",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hexojs/hexo-livereload.git"
+  "scripts": {
+    "eslint": "eslint .",
+    "jscs": "jscs .",
+    "test": "mocha test/index.js",
+    "test-cov": "istanbul cover _mocha --print both test/index.js"
   },
-  "bugs": {
-    "url": "https://github.com/hexojs/hexo-livereload/issues"
-  },
+  "repository": "hexojs/hexo-livereload",
   "keywords": [
     "hexo",
     "livereload",
     "reload"
   ],
   "author": "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)",
-  "license": {
-    "type": "MIT",
-    "url": "https://raw.github.com/tommy351/hexo/master/LICENSE"
-  },
+  "license": "MIT",
   "dependencies": {
-    "tiny-lr": "0.0.5"
+    "object-assign": "^4.0.1",
+    "tiny-lr": "^0.2.1"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "eslint": "^1.9.0",
+    "eslint-config-hexo": "^1.0.2",
+    "istanbul": "^0.4.0",
+    "jscs": "^2.5.1",
+    "jscs-preset-hexo": "^1.0.1",
+    "mocha": "^2.3.3"
   }
 }
